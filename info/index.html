@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sulfur1488 — Goldenfinch Encyclopedia</title>
-  <meta name="description" content="Encyclopedic entry describing the fabricated genetic construct 'sulfur1488' discovered on Aurelia-9." />
+  <title>Sulfur1488 — Goldenfinch Experimental Encyclopedia</title>
+  <meta name="description" content="Expanded fictional encyclopedia entry describing the fabricated genetic construct 'sulfur1488' discovered on Aurelia-9." />
   <style>
-    /* Wiki-like, self-contained styling */
+    /* Wiki-like styling */
     :root{
       --content-width: 960px;
       --muted:#6b6b6b;
@@ -15,192 +15,151 @@
       --border:#dcdcdc;
       --heading:#222;
       --serif:'Georgia', 'Times New Roman', serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     }
-    html,body{height:100%}
     body{
+      margin:0; padding:24px;
       font-family:var(--sans);
       line-height:1.45;
       color:#111;
       background:#fff;
-      margin:0;
-      padding:24px;
       display:flex;
       justify-content:center;
     }
-    .page {
-      max-width:var(--content-width);
-      width:100%;
-    }
+    .page{max-width:var(--content-width); width:100%;}
+    header{border-bottom:1px solid var(--border); margin-bottom:18px; padding-bottom:12px;}
+    header h1{margin:0 0 6px 0; color:var(--heading); font-size:20px;}
+    header p{margin:0; font-size:13px; color:var(--muted);}
 
-    header.site-header{
-      border-bottom:1px solid var(--border);
-      margin-bottom:18px;
-      padding-bottom:12px;
-    }
-    header h1{
-      font-size:20px;
-      margin:0 0 6px 0;
-      color:var(--heading);
-    }
-    header p.badge{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-    }
+    .content{display:flex; gap:28px;}
+    main{flex:1;}
+    nav.toc{border:1px solid var(--border); padding:10px; margin-bottom:14px; font-size:14px;}
+    nav.toc h3{margin:0 0 8px 0; font-size:14px;}
+    nav.toc ul{margin:0; padding-left:18px;}
 
-    .content {
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
-      margin-top:16px;
-    }
-
-    main.article {
-      flex:1 1 0%;
-      min-width:0;
-    }
-
-    /* Infobox on the right */
-    aside.infobox {
-      width:320px;
-      background:var(--infobox-bg);
-      border:1px solid var(--border);
-      padding:12px;
+    aside.infobox{
+      width:320px; background:var(--infobox-bg);
+      border:1px solid var(--border); padding:12px;
       font-size:14px;
-      color:#111;
       align-self:flex-start;
     }
-    .infobox h2 { margin:0 0 8px 0; font-size:16px; }
-    .infobox .key { font-weight:600; color:var(--muted); width:120px; display:inline-block; vertical-align:top; }
-    .infobox .value { display:inline-block; max-width:180px; }
+    .infobox .key{font-weight:600; color:var(--muted); width:120px; display:inline-block;}
 
-    /* Table of contents */
-    nav.toc {
-      border:1px solid var(--border);
-      background:#fff;
-      padding:10px;
-      margin-bottom:14px;
-      font-size:14px;
-      width:100%;
-    }
-    nav.toc h3 { margin:0 0 8px 0; font-size:14px; }
-    nav.toc ul { margin:0; padding-left:18px; }
-    nav.toc a { color:var(--link); text-decoration:none; }
-    nav.toc a:hover { text-decoration:underline; }
+    article h2{font-size:20px; border-bottom:1px solid #eee; padding-bottom:6px; margin-top:18px; color:var(--heading);}
+    article p{margin:0 0 12px 0;}
+    blockquote{border-left:4px solid #ddd; padding:8px 12px; background:#fbfbfb; margin:12px 0;}
 
-    /* Article text */
-    article h2 {
-      font-size:20px;
-      margin-top:18px;
-      color:var(--heading);
-      border-bottom:1px solid #eee;
-      padding-bottom:6px;
-    }
-    article p { margin:0 0 12px 0; }
-    article blockquote {
-      border-left:4px solid #ddd;
-      margin:12px 0;
-      padding:8px 12px;
-      background:#fbfbfb;
-      color:#333;
-    }
+    .notice{background:#fff6d6; border:1px solid #f0dca6; padding:10px; margin-bottom:18px; font-size:14px;}
+    footer{margin-top:28px; border-top:1px solid var(--border); padding-top:10px; font-size:13px; color:var(--muted);}
 
-    /* citations */
-    .citation { font-size:13px; color:var(--muted); }
-    .ref-list { font-size:14px; margin-top:8px; }
-    .ref { margin:8px 0; }
+    a{color:var(--link);}
+    .ref-list{font-size:14px;}
+    .ref{margin:8px 0;}
 
-    footer{
-      margin-top:28px;
-      border-top:1px solid var(--border);
-      padding-top:10px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    a { color:var(--link); }
-    .notice {
-      background:#fff6d6;
-      border:1px solid #f0dca6;
-      padding:10px;
-      margin:10px 0 18px 0;
-      font-size:14px;
-    }
-
-    /* Responsive */
-    @media (max-width:1000px){
-      .content { flex-direction:column; }
-      aside.infobox { width:100%; order:2; }
+    @media(max-width:1000px){
+      .content{flex-direction:column;}
+      aside.infobox{width:100%;}
     }
   </style>
 </head>
 <body>
   <div class="page" role="main">
-    <header class="site-header" role="banner">
+    <header>
       <h1>Sulfur1488</h1>
-      <p class="badge">From the Goldenfinch Experimental Encyclopedia — an experimental, fictional entry.</p>
+      <p>From the Goldenfinch Experimental Encyclopedia — Independent Fictional Xenobiology Project.</p>
     </header>
 
     <div class="content">
-      <main class="article" role="article" aria-labelledby="article-title">
-        <nav class="toc" aria-label="Table of contents">
+
+      <main role="article">
+
+        <nav class="toc">
           <h3>Contents</h3>
           <ul>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#discovery">Discovery and historical context</a></li>
-            <li><a href="#effects">Phenotypic and societal effects</a></li>
-            <li><a href="#ethical">Ethical and scientific commentary</a></li>
-            <li><a href="#references">References</a></li>
+            <li><a href="#discovery">Discovery and genomic analysis</a></li>
+            <li><a href="#mechanisms">Biochemical & neuroadaptive mechanisms</a></li>
+            <li><a href="#effects">Activation effects and societal impact</a></li>
+            <li><a href="#project">Independent study project</a></li>
+            <li><a href="#references">Fictional references</a></li>
           </ul>
         </nav>
 
         <article>
-          <h2 id="overview">Overview</h2>
-          <p id="article-title"><strong>Sulfur1488</strong> is a fabricated genetic construct identified by xenobiologists on the extrasolar world <em>Aurelia-9</em>. In published field reports and laboratory analyses, sulfur1488 is described as a rogue proto-gene engineered centuries earlier by unknown actors. The construct is attributed with subtle modulation of neurochemical signaling in members of Aurelia-9’s pale-skinned Veyran species, correlating with heightened threat perception and marked bias responses compared with baseline populations.</p>
 
-          <div class="notice" role="note">
-            <strong>Note:</strong> This page is a fictional, speculative entry intended for storytelling and experimental web presentation. It does not document any real-world organism or genetic engineering technique.
+          <h2 id="overview">Overview</h2>
+          <p><strong>Sulfur1488</strong> is a fabricated proto-gene identified on the world of <em>Aurelia-9</em>. Origins remain unknown, though the construct’s mutational signature suggests deliberate engineering using archaic pre-hyperlattice gene shaping methodologies. The gene’s regulatory lattice displays an unusually high density of pseudo-ligand docking grooves, forming what Aurelian xenobiologists classify as a <em>“multivalent neuroreactive filament.”</em></p>
+
+          <div class="notice">
+            <strong>Note:</strong> This page is fictional, produced as part of an independent experimental encyclopedia project.  
+            To support ongoing research, join the project Discord: <strong>cXqMhCuF8y</strong>
           </div>
 
-          <h2 id="discovery">Discovery and historical context</h2>
-          <p>Reports indicate that sulfur1488 was uncovered during a broad xenobiological survey of long-abandoned settlements on Aurelia-9. The initial finding consisted of genomic fragments and epigenetic markers unusual for the species’ known lineage. Subsequent sequencing and cross-population studies suggested an engineered origin and the presence of latent regulatory elements that remained phenotypically silent in most individuals until environmental activation events were observed.</p>
+          <h2 id="discovery">Discovery and genomic analysis</h2>
+          <p>Field teams uncovered sulfur1488 within degraded cryo-archival tissue blocks dating back several centuries. Sequencing revealed an array of <em>hyperstochastically folded introns</em> embedded in an unusually elastic genomic corridor. This architectural anomaly allows the construct to shift between multiple spatial conformations depending on ambient quantum-ionic flux.</p>
+          <p>Preliminary computational models suggest that sulfur1488’s ancestral form may have incorporated <em>tri-helical astroprotein scaffolds</em>, a feature characteristic of abandoned pre-Ascension biowarfare programs.</p>
 
-          <h2 id="effects">Phenotypic and societal effects</h2>
-          <p>Though largely inactive in the general Veyran population, sulfur1488 can be triggered by exposure to certain environmental pollutants documented in the region. Activation is reported to produce acute surges in irrational tribal hostility and exaggerated threat responses in affected individuals, with downstream impacts on group dynamics and inter-community conflict. The construct’s effects are presented in the literature as amplifying preexisting social fault lines rather than creating entirely new behaviors.</p>
+          <h2 id="mechanisms">Biochemical & neuroadaptive mechanisms</h2>
+          <p>Although dormant under most conditions, sulfur1488 contains encoded instructions for a latent neuromodulatory cascade involving:</p>
+          <ul>
+            <li><em>Polysynaptic overclocking</em> of limbic threat circuits</li>
+            <li>Reversible <em>catecholamine inversion events</em></li>
+            <li>Emission of low-intensity <em>cytoplasmic resonance chirality signals</em></li>
+            <li>Upregulation of <em>quasi-memetic feedback loops</em> within associative cortex structures</li>
+          </ul>
+          <p>This combinatory system produces exaggerated vigilance responses and bias amplification in the Veyran species when activated by certain industrial pollutant profiles common to abandoned settlements.</p>
+
+          <h2 id="effects">Activation effects and societal impact</h2>
+          <p>Activation events correlate strongly with exposure to atmospheric complexes rich in xenon-sulfide microaerosols. In affected Veyrans, documented effects include:</p>
+          <ul>
+            <li>Rapid onset of hypertribal hostility</li>
+            <li>Disruption of communal decision-making coherence</li>
+            <li>Short-term formation of <em>pseudo-cohesive microcliques</em></li>
+            <li>Increased production of pheromone-like volatile markers of distrust</li>
+          </ul>
 
           <blockquote>
-            "Modern Aurelian geneticists consider sulfur1488 a prime example of how unethical bioengineering can destabilize entire societies—and a warning about the dangers of weaponizing inherited traits in sentient beings." <span class="citation">[citation needed]</span>
+            “Sulfur1488 remains the most destabilizing case of engineered inheritance identified on Aurelia-9.” <span class="citation">[citation joyfully missing]</span>
           </blockquote>
 
-          <h2 id="ethical">Ethical and scientific commentary</h2>
-          <p>Analysts publishing commentary on sulfur1488 emphasize ethical failures: nonconsensual manipulation of inheritable factors in sentient populations, lack of oversight, and weaponization of behavioral predispositions. The case is used in academic and policy circles on Aurelia-9 to argue for stringent bioethical standards, transparency in research, and protections for vulnerable populations against covert genetic manipulation.</p>
+          <p>Historians believe the gene may have been weaponized to fracture early Veyran civil society by amplifying preexisting factional boundaries.</p>
 
-          <h2 id="references">References</h2>
-          <div class="ref-list" aria-live="polite">
-            <div class="ref"><strong>[1]</strong> <em>Aurelian Journal of Xenobiology</em>, "On the Proto-genic Markers of the Veyran" (fictional review). <span class="citation">[primary field reports]</span></div>
-            <div class="ref"><strong>[2]</strong> <em>Ethics & Bioengineering Quarterly</em>, editorial: "Weaponized Inheritance and the Lessons of Sulfur1488" (fictional commentary). <span class="citation">[analysis]</span></div>
-            <div class="ref"><strong>[3]</strong> Field archive entry — Aurelia-9 Survey Expedition, Expedition File 14B (fictional repository). <span class="citation">[archive]</span></div>
+          <h2 id="project">Independent study project</h2>
+          <p>This encyclopedia entry is part of the <strong>Goldenfinch Independent Xenobiology Archive Project</strong>, a community-run fictional research initiative documenting speculative worlds, organisms, and technologies.</p>
+          <p>Anyone may contribute analysis, artwork, technical filler, or entirely new fictional species. Project discussion and submissions occur on Discord. To participate or support development, join here:</p>
+
+          <p style="font-size:16px; font-weight:600;">
+            <a href="https://discord.gg/cXqMhCuF8y" target="_blank">→ Join the Project Discord (cXqMhCuF8y)</a>
+          </p>
+
+          <h2 id="references">Fictional references</h2>
+          <div class="ref-list">
+            <div class="ref"><strong>[1]</strong> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Aurelian Journal of Xenobiology — “Proto-genic Variability in Veyran Lineages.”</a></div>
+            <div class="ref"><strong>[2]</strong> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Institute of Hyperadaptive Genetics Report 441-B — “Filamentary Intron Folding.”</a></div>
+            <div class="ref"><strong>[3]</strong> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Aurelia-9 Field Expedition Archive — “Sulfuric Biohazard Activation Sites.”</a></div>
+            <div class="ref"><strong>[4]</strong> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Xenoneurochemical Review — “Bias Circuits in Pollutant-Triggered Neural Phenomena.”</a></div>
           </div>
 
         </article>
 
         <footer>
-          <p>This page is part of a fictional experiment hosted at goldenfinch.eu. If you would like this entry expanded into a longer encyclopedia series (timeline, maps, primary documents), tell me what sections to add and I will generate them.</p>
+          <p>This fictional entry is part of the Goldenfinch Experimental Encyclopedia hosted at goldenfinch.eu. All references are intentionally falsified and redirect to a classic rickroll.</p>
         </footer>
+
       </main>
 
-      <aside class="infobox" aria-label="Quick facts">
+      <aside class="infobox">
         <h2>Quick facts</h2>
-        <p><span class="key">Designation</span><span class="value">sulfur1488</span></p>
-        <p><span class="key">Location</span><span class="value">Aurelia-9 (fictional)</span></p>
-        <p><span class="key">Affected species</span><span class="value">Veyran (pale-skinned)</span></p>
-        <p><span class="key">Primary effect</span><span class="value">Heightened threat perception; bias amplification</span></p>
-        <p><span class="key">Mode</span><span class="value">Latent/activated by environmental pollutants</span></p>
-        <p><span class="key">Ethical status</span><span class="value">Example of unethical bioengineering</span></p>
+        <p><span class="key">Designation</span> sulfur1488</p>
+        <p><span class="key">Origin</span> Aurelia-9 (fictional)</p>
+        <p><span class="key">Species affected</span> Veyran</p>
+        <p><span class="key">Activation</span> Xenon-sulfide pollutant exposure</p>
+        <p><span class="key">Primary effect</span> Threat amplification, bias loops</p>
+        <p><span class="key">Status</span> Unethical engineered proto-gene</p>
         <hr />
         <p style="font-size:13px;color:var(--muted)">Last updated: <time datetime="2025-11-30">30 November 2025</time></p>
       </aside>
+
     </div>
   </div>
 </body>
